@@ -1,0 +1,347 @@
+	<style>
+	a:link{color:#03F; text-align:center;}
+	a:visited{color:#09C;}
+	a:hover{color:#0F0; background-color:#006;		cursor:crosshair;}
+	p.show{display:block}
+	p.hide{display:none}
+	.news_text
+	{
+	color:#F00;
+	background-color:#240001;
+	cursor:help;
+	text-decoration:none;		
+	}
+	.body
+{	
+	border:none;
+	text-align: center;
+	border:none;
+	text-align:center;
+	font-family: Arial, Helvetica, "sans-serif normal";
+	color: #333;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: 100;
+	background-color: #000;
+	background-repeat: repeat;
+}
+.news_table
+{
+	background:#300;
+	text-align:center;
+	vertical-align:text-top;
+	border-top-style: inset;
+	border-right-style: dashed;
+	border-bottom-style: solid;
+	border-left-style: dashed;
+	border-right-color: #900;
+	border-left-color: #900;
+	border-right-width: thin;
+	border-left-width: thin;
+	border-top-width: thick;
+	border-top-color: #900;
+	border-bottom-color: #900;
+	border-bottom-width: thin;
+	font-family: Arial, Helvetica, "sans-serif normal";
+	font-size: 12px;
+	color: #333;
+	font-weight: normal;
+	font-variant: normal;
+	font-style: normal;
+}
+.news_table_imgbox {
+	background: #000  center no-repeat fixed;
+}
+
+.news_table_body {
+	border-color:#000;
+	background-color:#000; 
+	text-align: center;
+	vertical-align:text-top;	
+}
+.news_table_title {
+	font-weight: bold;
+	background-color:#000;
+}
+.news_table_date {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color:#000;
+}
+.menu_selection {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:10px;
+	color:#600;
+	text-align:center;
+	text-shadow:#006;
+	cursor:crosshair;
+	background-color:#000;
+	border:thin solid #C00;
+	table-layout:inherit;
+	vertical-align:top;
+}
+.menu_selection_hover {
+
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:14px;
+	color:#F00;
+	cursor:crosshair;
+	background-color: #2F0001;
+	
+	text-align:center;
+	text-shadow:#006;
+	border:thin solid #C00;
+	table-layout:inherit;
+	vertical-align:top;
+}
+
+#copyright,#copyright:hover {
+	text-align: center;
+	font-size: 6px;
+	background-color: #000;
+	color: #333;
+	border: medium inset #C00;
+	table-layout:auto;
+	font-family: "Comic Sans MS", cursive;
+	
+}
+#copyright:hover {	font-size: 10px; }
+#img_effect:hover{ border:#F00 thin inset;}
+.background_banner {background:url(img/banner.png)}
+
+</style>
+
+<script language="javascript">
+var output = '';
+var src = '';
+var specs = '';
+var title = 'Welcome, 1990 Mazda Rx-7 For Sale ';
+function change(to)
+{
+	document.getElementById('big_pic').src = to;
+	document.getElementById('big_pic').getElementsByTagName('src') = to;
+}
+function changesize()
+{	
+		document.getElementById('big_pic').height = document.getElementById('imgsize').value;
+}
+
+function view(input)
+{
+	switch(input)
+	{
+		case 'showmedia':
+			document.title = 'Media ' + title;
+			showmedia();
+			break;
+		case 'showspecs':
+			document.title = "Spec's " + title;
+			showspecs();
+			break;
+		case 'myspace':
+			document.title = "Spec's " + title;
+			myspace();
+			break;
+	}
+}
+function myspace()
+{window.location = "http://myspace.com/nwa_rx7";}
+function showspecs()
+{
+		document.getElementById('main').innerHTML = specs;
+}
+function showmedia()
+{
+	output = "Image Size: <select name='imgsize' id='imgsize' onchange='changesize()'>  <option value='250'>Small</option>  <option value='500' selected='selected'>Regular</option>  <option value='1000'>Large</option>  <option value='1200'>Full</option></select><br /><img id='big_pic' onClick='' src='" + src + "img/rx7/rx7-(0).jpg" +"' height='500'>"
+output += '<table width="0%" border="0">  <tr>';
+	for (i=0;i<34;i++)
+		{
+				output += '<td>';
+				output += "<img id='rx7_" + i + "' onClick='change(" + '"' + src + "img/rx7/rx7-(" + i + ").jpg" + '"' + ")' src='img/rx7/rx7-(" + i + ").jpg' height='100'>";
+				output += '</td>';
+			if(i == 3 || i == 7 || i == 11 || i == 15 || i == 19 || i == 23 || i == 27 || i == 31 || i == 35 || i == 39 )
+			{
+				 output += ' </tr>   <tr>';
+			}
+		}
+		output += '  </tr></table>';
+
+		document.getElementById('main').innerHTML = output;
+}
+
+</script>
+<title>Welcome, 1990 Mazda Rx-7 For Sale</title><body class="body" onLoad="specs = document.getElementById('main').innerHTML;">
+<table width='90%' border='0'>
+  <tr>
+    <td><img src="img/banner.png" name="banner" border="1" class='news_text'  /></td>
+  </tr>
+  <tr>
+    <td>&nbsp;<marquee direction='left' id='scrolling_mod' class='news_text' scrollamount='4' scrolldelay='50' height='20' width='1029'> Welcome, 1990 Mazda Rx-7 For Sale / Trade $3500 : Location - Schofield Barracks : Trade - Nissan 240sx </marquee></td>
+  </tr>
+</table>
+<table width="90%" align='center' class='body'>
+  <tr>
+    <td width="15%" align='center' valign='top'><br />
+      <table width='90%'>
+        <tr>
+          <td   id='menu_selection'></td>
+        </tr>
+        <tr>
+          <td class="menu_selection" id='menu_selection1' onClick="view('showspecs');" onMouseOver="document.getElementById('menu_selection1').className = 'menu_selection_hover';" onMouseOut="document.getElementById('menu_selection1').className = 'menu_selection';">Spec's</td>
+        </tr>
+        <tr>
+          <td class="menu_selection" id='menu_selection2' onClick="view('showmedia');" onMouseOver="document.getElementById('menu_selection2').className = 'menu_selection_hover';" onMouseOut="document.getElementById('menu_selection2').className = 'menu_selection';"> Pictures</td>
+        </tr>
+        <tr>
+          <td class="menu_selection" id='menu_selection3' onClick="view('myspace');" onMouseOver="document.getElementById('menu_selection3').className = 'menu_selection_hover';" onMouseOut="document.getElementById('menu_selection3').className = 'menu_selection';"> More Info on car Here</td>
+        </tr>
+        <tr>
+          <td class="menu_selection" id='menu_selection1'></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </table></td>
+    <td width="83%"><div align="center"> <p id='main' class='show'>To view pictures click on the left.<br />
+<table border='0' class='news_table'>
+  <tr>
+    <td width='142'>Basic Info</td>
+    <td width='142'>Quality / Shape</td>
+  </tr>
+  <tr>
+    <td><table border='0' align="center" class='news_text'>
+      <tr>
+        <td>Year</td>
+        <td>1990</td>
+      </tr>
+      <tr>
+        <td>Model</td>
+        <td>Rx7</td>
+      </tr>
+      <tr>
+        <td>Make</td>
+        <td>Mazda</td>
+      </tr>
+      <tr>
+        <td>Invested</td>
+        <td>$8000</td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td>$3500</td>
+      </tr>
+    </table></td>
+    <td><table border='0' align="center" class='news_text'>
+      <tr>
+        <td>Engine</td>
+        <td>Perfict</td>
+      </tr>
+      <tr>
+        <td>Body</td>
+        <td>Good</td>
+      </tr>
+      <tr>
+        <td>Interior</td>
+        <td>Ok</td>
+      </tr>
+      <tr>
+        <td>Tires</td>
+        <td>Good</td>
+      </tr>
+      <tr>
+        <td>Windows</td>
+        <td>Perfict</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<br />
+<table border='0' class='news_table'>
+  <tr>
+    <td width='216'>Pro's / Con's</td>
+  </tr>
+  <tr>
+    <td><table border='0' align="center" class='news_text'>
+      <tr>
+        <td>GOOD</td>
+        <td>BAD</td>
+      </tr>
+      <tr>
+        <td>Engine</td>
+        <td>Exhaust</td>
+      </tr>
+      <tr>
+        <td>Ported</td>
+        <td>A/C</td>
+      </tr>
+      <tr>
+        <td>Driveshaft</td>
+        <td>Rear Wiper</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<br />
+<table width="90%" border='0' class='news_table'>
+  <tr>
+    <td width='216'>Description</td>
+  </tr>
+  <tr>
+    <td><table width='90%' border='0' align="center" class='news_text'>
+      <tr>
+        <td>The car has alot of potential.The plan was to build it as a drift car when I bought it...<br />
+          Now that I have the money to do it I've came across better deals for a drift car.<br />
+          The car runs perfect no engine problems at all.<br />
+          It has alot of possibility to be done to it depending on your taste.<br />
+          The car is in storage till October.<br />
+          <br />
+          I am not going to lie to you about any of it.<br />
+          The only rust on the car is on the sunroof but does not effect the car, no leaks in the sunroof...<br />
+          I have the recite for when the car was rebuild and ported.<br>
+          <br>
+          I wish I could keep the car but once I leave Hawaii I can only ship one car..</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<br />
+<table width="90%" border='0' class='news_table'>
+  <tr>
+    <td width='216'>Trade / Swap</td>
+  </tr>
+  <tr>
+    <td><table width='90%' border='0' align="center" class='news_text'>
+      <tr>
+        <td>I will trade it only for a Nissan s13 , s14 , 240sx<br />
+          No I am not paying you to trade either the rx7 has more value then a 240<br />
+          Unless it is been worked on.<br />
+          Just contact me regarding trades.</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<br />
+<table width="90%" border='0' class='news_table'>
+  <tr>
+    <td width='216'>History of the car</td>
+  </tr>
+  <tr>
+    <td><table width='90%' border='0' align="center" class='news_text'>
+      <tr>
+        <td>The car was purchased in Florida September 2007<br />
+          Engine was soon rebuilt after bought.<br />
+          Then in the car was moved to Arkansas while I joined the army and it sat for a Year in storage.<br />
+          The car went to Hawaii in October 2008<br />
+          Since December 2008 the car has been in storage and will be brought out in October.</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+`</p></div></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DESIGNED - By admin@g-v.us</td>
+  </tr>
+</table>
+</body>
